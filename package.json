@@ -1,7 +1,6 @@
 {
-  "name": "@Hashibutogarasu/db",
+  "name": "@karasu-lab/db",
   "version": "0.1.0",
-  "private": true,
   "exports": {
     ".": "./src/index.ts",
     "./schema": "./src/schema/index.ts",
@@ -20,5 +19,11 @@
   },
   "peerDependencies": {
     "drizzle-orm": "^0.44.7"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

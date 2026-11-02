@@ -1,6 +1,6 @@
-import { drizzle } from 'drizzle-orm/postgres-js';
-import postgres from 'postgres';
-import * as schema from './schema';
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
+import * as schema from "./schema";
 
 export type Db = ReturnType<typeof drizzle<typeof schema>>;
 
@@ -11,6 +11,6 @@ export type Db = ReturnType<typeof drizzle<typeof schema>>;
  * `server-only`, so it can be bundled into a Cloudflare Worker.
  */
 export function createDb(url: string): Db {
-  const sql = postgres(url, { max: 1 });
-  return drizzle(sql, { schema });
+    const sql = postgres(url, { max: 1 });
+    return drizzle(sql, { schema });
 }

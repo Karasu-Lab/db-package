@@ -1,21 +1,24 @@
-import { and, eq } from 'drizzle-orm';
-import { getDb } from './client';
-import { accounts } from './schema';
+import { and, eq } from "drizzle-orm";
+import { getDb } from "./client";
+import { accounts } from "./schema";
 
 /**
  * Lists the social-provider IDs linked to the given Firebase UID via
  * better-auth's `account` table (e.g. `["google", "github"]`).
  */
 export async function getLinkedProviderIds(uid: string): Promise<string[]> {
-  const db = getDb();
-  const rows = await db.select({ providerId: accounts.providerId }).from(accounts).where(eq(accounts.userId, uid));
-  return rows.map((r) => r.providerId);
+    const db = getDb();
+    const rows = await db
+        .select({ providerId: accounts.providerId })
+        .from(accounts)
+        .where(eq(accounts.userId, uid));
+    return rows.map((r) => r.providerId);
 }
 
 export interface ProviderAccountTokens {
-  accessToken: string | null;
-  refreshToken: string | null;
-  idToken: string | null;
+    accessToken: string | null;
+    refreshToken: string | null;
+    idToken: string | null;
 }
 
 /**
@@ -26,11 +29,20 @@ export interface ProviderAccountTokens {
  * derived from these by replaying them through the provider's own
  * `getUserInfo`.
  */
-export async function getProviderAccountTokens(uid: string, providerId: string): Promise<ProviderAccountTokens | null> {
-  const db = getDb();
-  const [row] = await db
-    .select({ accessToken: accounts.accessToken, refreshToken: accounts.refreshToken, idToken: accounts.idToken })
-    .from(accounts)
-    .where(and(eq(accounts.userId, uid), eq(accounts.providerId, providerId)));
-  return row ?? null;
+export async function getProviderAccountTokens(
+    uid: string,
+    providerId: string,
+): Promise<ProviderAccountTokens | null> {
+    const db = getDb();
+    const [row] = await db
+        .select({
+            accessToken: accounts.accessToken,
+            refreshToken: accounts.refreshToken,
+            idToken: accounts.idToken,
+        })
+        .from(accounts)
+        .where(
+            and(eq(accounts.userId, uid), eq(accounts.providerId, providerId)),
+        );
+    return row ?? null;
 }

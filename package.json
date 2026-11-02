@@ -1,34 +1,35 @@
 {
-  "name": "@karasu-lab/db",
-  "version": "0.1.0",
-  "exports": {
-    ".": "./src/index.ts",
-    "./schema": "./src/schema/index.ts",
-    "./client": "./src/client.ts",
-    "./create-db": "./src/create-db.ts"
-  },
-  "dependencies": {
-    "@neondatabase/auth": "latest",
-    "@paralleldrive/cuid2": "^3.3.0",
-    "postgres": "^3.4.7",
-    "server-only": "^0.0.1"
-  },
-  "devDependencies": {
-    "drizzle-orm": "^0.44.7",
-    "typescript": "^5"
-  },
-  "peerDependencies": {
-    "drizzle-orm": "^0.44.7"
-  },
-  "files": [
-    "src"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Karasu-Lab/db-package.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
-    "access": "public"
-  }
+    "name": "@karasu-lab/db",
+    "version": "0.1.0",
+    "exports": {
+        ".": "./src/index.ts",
+        "./schema": "./src/schema/index.ts",
+        "./client": "./src/client.ts",
+        "./create-db": "./src/create-db.ts"
+    },
+    "dependencies": {
+        "@neondatabase/auth": "latest",
+        "@paralleldrive/cuid2": "^3.3.0",
+        "postgres": "^3.4.7",
+        "server-only": "^0.0.1"
+    },
+    "devDependencies": {
+        "@types/node": "^20.19.43",
+        "drizzle-orm": "^0.44.7",
+        "typescript": "^5"
+    },
+    "peerDependencies": {
+        "drizzle-orm": "^0.44.7"
+    },
+    "files": [
+        "src"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Karasu-Lab/db-package.git"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com",
+        "access": "public"
+    }
 }

@@ -4,4 +4,8 @@
  * `schema/index.ts` barrel so this app's migration history never picks up
  * tables owned by other apps.
  */
-export { qrGenerations, type QrGeneration, type NewQrGeneration } from '../qr-generations';
+export {
+    qrGenerations,
+    type NewQrGeneration,
+    type QrGeneration,
+} from "../qr-generations";

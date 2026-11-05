@@ -27,6 +27,8 @@ export const deviceCodes = pgTable(
         lastPolledAt: timestamp("last_polled_at"),
         pollingInterval: integer("polling_interval"),
         clientId: text("client_id"),
+        oauthClientId: text("oauth_client_id"),
+        resources: text("resources").array(),
         scope: text("scope"),
         createdAt: timestamp("created_at").defaultNow().notNull(),
         updatedAt: timestamp("updated_at")

@@ -33,6 +33,11 @@ export {
     type OAuthClientAssertion,
 } from "./oauth-client-assertions";
 export {
+    oauthClientInfo,
+    type NewOAuthClientInfo,
+    type OAuthClientInfo,
+} from "./oauth-client-info";
+export {
     oauthClientResources,
     type NewOAuthClientResource,
     type OAuthClientResource,

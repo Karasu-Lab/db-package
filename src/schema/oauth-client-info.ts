@@ -14,10 +14,9 @@ export const oauthClientInfo = pgTable("oauth_client_info", {
         .primaryKey()
         .references(() => oauthClients.clientId, { onDelete: "cascade" }),
     name: text("name").notNull(),
-    authorId: varchar("author_id", { length: 128 }).references(
-        () => users.id,
-        { onDelete: "set null" },
-    ),
+    authorId: varchar("author_id", { length: 128 }).references(() => users.id, {
+        onDelete: "set null",
+    }),
     iconUrl: text("icon_url"),
     description: text("description"),
     createdAt: timestamp("created_at").defaultNow().notNull(),

@@ -13,6 +13,11 @@ export {
     type Verification,
 } from "./auth-verifications";
 export {
+    deviceCodes,
+    type DeviceCode,
+    type NewDeviceCode,
+} from "./device-codes";
+export {
     firebaseUsers,
     type FirebaseUser,
     type NewFirebaseUser,

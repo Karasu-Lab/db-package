@@ -43,6 +43,11 @@ export {
     type OAuthClient,
 } from "./oauth-clients";
 export {
+    oauthClientInfo,
+    type NewOAuthClientInfo,
+    type OAuthClientInfo,
+} from "./oauth-client-info";
+export {
     oauthConsents,
     type NewOAuthConsent,
     type OAuthConsent,

@@ -1,4 +1,10 @@
-import { boolean, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
+import {
+    boolean,
+    pgTable,
+    text,
+    timestamp,
+    varchar,
+} from "drizzle-orm/pg-core";
 import { oauthClients } from "./oauth-clients";
 import { users } from "./users";
 

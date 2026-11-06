@@ -1,7 +1,6 @@
 import { createId } from "@paralleldrive/cuid2";
-import { integer, pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
-/** Catalog of grantable permissions. `numericId` matches `AbstractPermission.id()` in `@karasu-lab/api-permissions`; `publicId` is what clients use to refer to a permission. */
 export const permissions = pgTable("permissions", {
     id: text("id")
         .primaryKey()
@@ -10,7 +9,6 @@ export const permissions = pgTable("permissions", {
         .notNull()
         .unique()
         .$defaultFn(() => createId()),
-    numericId: integer("numeric_id").notNull().unique(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at")
         .defaultNow()

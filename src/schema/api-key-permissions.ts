@@ -2,7 +2,6 @@ import { pgTable, primaryKey, text } from "drizzle-orm/pg-core";
 import { apiKeys } from "./api-keys";
 import { permissions } from "./permissions";
 
-/** Permissions granted to each API key. The bitmask is derived from these rows at verification time and never stored. */
 export const apiKeyPermissions = pgTable(
     "api_key_permissions",
     {

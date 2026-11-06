@@ -74,6 +74,11 @@ export {
     type QrGeneration,
 } from "./qr-generations";
 export {
+    sessionDevicesSource,
+    type NewSessionDeviceSource,
+    type SessionDeviceSource,
+} from "./session-devices-source";
+export {
     ssoProviders,
     type NewSsoProvider,
     type SsoProvider,

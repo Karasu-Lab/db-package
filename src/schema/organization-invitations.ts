@@ -1,6 +1,6 @@
 import { index, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
-import { organizations } from "./organizations";
 import { teams } from "./organization-teams";
+import { organizations } from "./organizations";
 import { users } from "./users";
 
 export const invitations = pgTable(

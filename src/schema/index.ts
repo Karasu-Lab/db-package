@@ -96,11 +96,6 @@ export {
     type SessionDeviceSource,
 } from "./session-devices-source";
 export {
-    signingKeyAuthorizations,
-    type NewSigningKeyAuthorization,
-    type SigningKeyAuthorization,
-} from "./signing-key-authorizations";
-export {
     ssoProviders,
     type NewSsoProvider,
     type SsoProvider,

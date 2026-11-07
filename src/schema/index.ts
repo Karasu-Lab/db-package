@@ -121,8 +121,8 @@ export {
     type TenantNpmConfiguration,
 } from "./tenant-npm-configurations";
 export {
-    tenantSigningKeys,
-    type NewTenantSigningKey,
-    type TenantSigningKey,
-} from "./tenant-signing-keys";
+    userSigningKeys,
+    type NewUserSigningKey,
+    type UserSigningKey,
+} from "./user-signing-keys";
 export { users, type NewUser, type User } from "./users";

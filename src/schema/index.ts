@@ -62,6 +62,23 @@ export {
     type NewOAuthResource,
     type OAuthResource,
 } from "./oauth-resources";
+export {
+    invitations,
+    type Invitation,
+    type NewInvitation,
+} from "./organization-invitations";
+export { members, type Member, type NewMember } from "./organization-members";
+export {
+    teamMembers,
+    type NewTeamMember,
+    type TeamMember,
+} from "./organization-team-members";
+export { teams, type NewTeam, type Team } from "./organization-teams";
+export {
+    organizations,
+    type NewOrganization,
+    type Organization,
+} from "./organizations";
 export { passkeys, type NewPasskey, type Passkey } from "./passkeys";
 export {
     permissions,
@@ -79,8 +96,33 @@ export {
     type SessionDeviceSource,
 } from "./session-devices-source";
 export {
+    signingKeyAuthorizations,
+    type NewSigningKeyAuthorization,
+    type SigningKeyAuthorization,
+} from "./signing-key-authorizations";
+export {
     ssoProviders,
     type NewSsoProvider,
     type SsoProvider,
 } from "./sso-providers";
+export {
+    tenantGithubInstallations,
+    type NewTenantGithubInstallation,
+    type TenantGithubInstallation,
+} from "./tenant-github-installations";
+export {
+    tenantLinkedPackages,
+    type NewTenantLinkedPackage,
+    type TenantLinkedPackage,
+} from "./tenant-linked-packages";
+export {
+    tenantNpmConfigurations,
+    type NewTenantNpmConfiguration,
+    type TenantNpmConfiguration,
+} from "./tenant-npm-configurations";
+export {
+    tenantSigningKeys,
+    type NewTenantSigningKey,
+    type TenantSigningKey,
+} from "./tenant-signing-keys";
 export { users, type NewUser, type User } from "./users";

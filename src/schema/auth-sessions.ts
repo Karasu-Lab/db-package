@@ -1,7 +1,6 @@
 import { index, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
 import { users } from "./users";
 
-/** better-auth's `session` model. New table; NextAuth used stateless JWTs before this. */
 export const sessions = pgTable(
     "session",
     {
@@ -17,6 +16,8 @@ export const sessions = pgTable(
         userId: varchar("user_id", { length: 128 })
             .notNull()
             .references(() => users.id, { onDelete: "cascade" }),
+        activeOrganizationId: text("active_organization_id"),
+        activeTeamId: text("active_team_id"),
     },
     (t) => [index("session_userId_idx").on(t.userId)],
 );

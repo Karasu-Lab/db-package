@@ -116,11 +116,6 @@ export {
     type TenantLinkedPackage,
 } from "./tenant-linked-packages";
 export {
-    tenantNpmConfigurations,
-    type NewTenantNpmConfiguration,
-    type TenantNpmConfiguration,
-} from "./tenant-npm-configurations";
-export {
     userSigningKeys,
     type NewUserSigningKey,
     type UserSigningKey,

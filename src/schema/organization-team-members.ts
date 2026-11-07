@@ -12,6 +12,7 @@ export const teamMembers = pgTable(
         userId: varchar("user_id", { length: 128 })
             .notNull()
             .references(() => users.id, { onDelete: "cascade" }),
+        membershipKey: text("membership_key").unique(),
         createdAt: timestamp("created_at").defaultNow().notNull(),
     },
     (t) => [

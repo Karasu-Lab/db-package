@@ -1,4 +1,4 @@
-import { index, pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { index, integer, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import { organizations } from "./organizations";
 
 export const teams = pgTable(
@@ -6,6 +6,7 @@ export const teams = pgTable(
     {
         id: text("id").primaryKey(),
         name: text("name").notNull(),
+        memberCount: integer("member_count").default(0).notNull(),
         organizationId: text("organization_id")
             .notNull()
             .references(() => organizations.id, { onDelete: "cascade" }),

@@ -1,7 +1,8 @@
+/// <reference types="@cloudflare/workers-types" />
 import { Client } from "pg";
 
 export default {
-    async fetch(request, env, ctx) {
+    async fetch(_request, env) {
         // Hyperdrive provides a unique generated connection string to connect to
         // your database via Hyperdrive that can be used with your existing tools
         const client = new Client({
@@ -21,4 +22,4 @@ export default {
             );
         }
     },
-};
+} satisfies ExportedHandler<{ HYPERDRIVE: Hyperdrive }>;

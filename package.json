@@ -10,6 +10,7 @@
     "dependencies": {
         "@neondatabase/auth": "latest",
         "@paralleldrive/cuid2": "^3.3.0",
+        "pg": "^8.23.1",
         "postgres": "^3.4.7",
         "server-only": "^0.0.1"
     },

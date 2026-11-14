@@ -111,6 +111,11 @@ export {
     type TenantLinkedPackage,
 } from "./tenant-linked-packages";
 export {
+    tenantTypes,
+    type NewTenantTypeRow,
+    type TenantTypeRow,
+} from "./tenant-types";
+export {
     userSigningKeys,
     type NewUserSigningKey,
     type UserSigningKey,

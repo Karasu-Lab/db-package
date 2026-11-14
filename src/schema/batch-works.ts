@@ -1,4 +1,11 @@
-import { index, pgEnum, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
+import {
+    index,
+    pgEnum,
+    pgTable,
+    text,
+    timestamp,
+    varchar,
+} from "drizzle-orm/pg-core";
 
 export const batchWorkStatus = pgEnum("batch_work_status", [
     "pending",
@@ -19,7 +26,12 @@ export const batchWorks = pgTable(
         startedAt: timestamp("started_at"),
         finishedAt: timestamp("finished_at"),
     },
-    (t) => [index("batch_works_status_scheduled_at_idx").on(t.status, t.scheduledAt)],
+    (t) => [
+        index("batch_works_status_scheduled_at_idx").on(
+            t.status,
+            t.scheduledAt,
+        ),
+    ],
 );
 
 export type BatchWork = typeof batchWorks.$inferSelect;

@@ -6,6 +6,13 @@ export {
 export { apiKeys, type ApiKey, type NewApiKey } from "./api-keys";
 export { accounts, type Account, type NewAccount } from "./auth-accounts";
 export { jwks, type Jwk, type NewJwk } from "./auth-jwks";
+export {
+    batchWorks,
+    batchWorkStatus,
+    type BatchWork,
+    type BatchWorkStatus,
+    type NewBatchWork,
+} from "./batch-works";
 export { sessions, type NewSession, type Session } from "./auth-sessions";
 export {
     verifications,
